@@ -1,0 +1,44 @@
+<header class = "navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <div class="row">
+      <%= link_to image_tag("logo/logo.png"), "#", class: "navbar-brand" %>
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item ml-4">
+            <%= link_to "HOME", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "ABOUT US", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "REVERVATION", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "MENU", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "OUR BLOG", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "CONTACT", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item ml-4">
+            <!-- <i class="fal fa-cart-plus"></i> -->
+            <%= link_to "Cart", "#", class: "nav-link btn btn-outline-secondary
+              fa fa-cart-plus" %>
+          </li>
+          <li class="nav-item ml-4">
+            <%= link_to "My Account",  "#", class: "nav-link btn 
+              btn-outline-success fa fa-user" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+</header>
