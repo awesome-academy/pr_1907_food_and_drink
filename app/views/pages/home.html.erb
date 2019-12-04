@@ -1,9 +1,9 @@
-<% provide :title, "Home" %>
+<% provide :title, t(".home") %>
 <div class="container mt-3">
   <div class="row">
     <div class="col-md-8">
       <div id="carouselExampleCaptions" class="carousel slide" 
-        data-ride="carousel">
+        dinforide="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" 
             class="active"></li>
@@ -108,7 +108,7 @@
     <div class="row">
       <div class="col-sm-12">
          <h4 class="text-success text-center mb-4">
-          ABOUT OUR RESTAURANT FOOD & DRINKES
+          <%= t(".about-us") %>
         </h4>
       </div>
     </div>
@@ -137,7 +137,7 @@
           consectetur adipiscing elit. Nullam efficitur placerat nulla, in 
           suscipit erat sodales id.
         </p>
-        <%= link_to "READ MORE", "#", class: "btn btn-info mt-3" %>
+        <%= link_to t(".read-more"), "#", class: "btn btn-info mt-3" %>
       </div>
       <div class="col-md-6">
         <%= image_tag("chief.jpg", class: "img-fluid") %>
@@ -151,7 +151,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h3 class="text-center">OUR MENU</h3>
+        <h3 class="text-center"><%= t(".our-menu") %></h3>
         <p class="text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
           efficitur placerat nulla, in suscipit erat sodales id. Nullam 
@@ -169,27 +169,28 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <a class="nav-item nav-link active" id="nav-all-tab" 
                 data-toggle="tab" href="#nav-all" role="tab" 
-                aria-controls="nav-all" aria-selected="true">ALL
+                aria-controls="nav-all" aria-selected="true"><%= t(".all") %>
               </a>
               <a class="nav-item nav-link" id="nav-breakfast-tab" 
                 data-toggle="tab" href="#nav-breakfast" role="tab" 
-                aria-controls="nav-breakfast" aria-selected="false">BREAKFAST
+                aria-controls="nav-breakfast" aria-selected="false">
+                <%= t(".breakfast") %>
               </a>
               <a class="nav-item nav-link" id="nav-lunch-tab" data-toggle="tab" 
                 href="#nav-lunch" role="tab" aria-controls="nav-contact" 
-                aria-selected="false">LUNCH
+                aria-selected="false"><%= t(".lunch") %>
               </a>
               <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab"
                 href="#nav-dinner" role="tab" aria-controls="nav-dinner" 
-                aria-selected="false">DINNER
+                aria-selected="false"><%= t(".dinner") %>
               </a>
               <a class="nav-item nav-link" id="nav-drinks-tab" data-toggle="tab" 
                 href="#nav-drinks" role="tab" aria-controls="nav-drinks" 
-                aria-selected="false">DRINKS
+                aria-selected="false"><%= t(".drinks") %>
               </a>
               <a class="nav-item nav-link" id="nav-others-tab" data-toggle="tab" 
                 href="#nav-others" role="tab" aria-controls="nav-drinks" 
-                aria-selected="false">OTHERS
+                aria-selected="false"><%= t(".others") %>
               </a>
             </div>
           </nav>
@@ -209,7 +210,7 @@
                           content.
                         </p>
                         <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to "ORDER NOW", "#", class: "btn btn-primary" %>
+                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
                       </div>
                     </div>
                   </div>
@@ -224,7 +225,7 @@
                           make up the bulk of the card's content.
                         </p>
                         <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to "ORDER NOW", "#", class: "btn btn-primary" %>
+                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
                       </div>
                     </div>
                   </div>
@@ -239,7 +240,7 @@
                           make up the bulk of the card's content.
                         </p>
                         <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to "ORDER NOW", "#", class: "btn btn-primary" %>
+                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
                       </div>
                     </div>
                   </div>
@@ -268,7 +269,7 @@
 
     <div class="row pt-3 text-center">  <!-- VIEW MORE -->
       <div class="col-sm-12">
-        <%= link_to "VIEW MORE", "#", class: "btn btn-outline-info" %> 
+        <%= link_to t(".view-more"), "#", class: "btn btn-outline-info" %> 
         <hr>
       </div>
     </div>  <!-- Het row View more -->
@@ -280,7 +281,7 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-12">
-        <h2 class="text-secondary text-center">RESERVATION</h2>
+        <h2 class="text-secondary text-center"><%= t(".reservation") %></h2>
         <p class="text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
           efficitur placerat nulla, in suscipit erat sodales id. Nullam 
@@ -291,10 +292,10 @@
     </div>
     <div class="row mt-2">
       <div class="col-md-6 text-center">
-        <%= link_to "Take away", "#", class: "btn btn-outline-primary" %>
+        <%= link_to t(".take-away"), "#", class: "btn btn-outline-primary" %>
       </div>
       <div class="col-md-6 text-center">
-        <%= link_to "Revervation", "#", class: "btn btn-outline-success" %>
+        <%= link_to t(".reservation"), "#", class: "btn btn-outline-success" %>
       </div>
     </div>
   </div>
@@ -304,7 +305,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h5 class="text-center">OUR BLOG </h5>
+        <h5 class="text-center"><%= t(".our-blog") %> </h5>
         <p class="text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
           efficitur placerat nulla, in suscipit erat sodales id. Nullam 
@@ -324,7 +325,7 @@
               Some quick example text to build on the card 
               title and make up the bulk of the card's content.
             </p>
-            <%= link_to "Read more", "#", class: "btn btn-primary" %>
+            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
           </div>
         </div>
       </div>
@@ -338,7 +339,7 @@
               Some quick example text to build on the card 
               title and make up the bulk of the card's content.
             </p>
-            <%= link_to "Read more", "#", class: "btn btn-primary" %>
+            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
           </div>
         </div>
       </div>
@@ -352,7 +353,7 @@
               Some quick example text to build on the card 
               title and make up the bulk of the card's content.
             </p>
-            <%= link_to "Read more", "#", class: "btn btn-primary" %>
+            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
           </div>
         </div>
       </div>

@@ -1,0 +1,56 @@
+vi:
+  # Layouts
+  layouts:
+    # Header
+    header:
+      home: Trang Chủ
+      about: Giới Thiệu
+      reservation: Đặt Trước
+      menu: Menu
+      blog: Blog
+      contact: Liên Hệ
+      cart: Giỏ Hàng
+      account: Tài Khoản
+      Vietnamese: Tiếng Việt
+      English: Tiếng Anh
+      Languages: Tiếng Việt
+
+    # Footer  
+    footer:
+      # Information
+      infor: THÔNG TIN
+      about: Chúng Tôi
+      deli: Thông Tin Vẫn Chuyển
+      contact: Liên Hê
+      term: Terms & Conditions
+      sitemap: Bản Đồ
+      # Working time
+      woti: THỜI GIAN LÀM VIỆC
+      mo-fr: Thứ 2 - Thứ 6
+      sa-su: Thư 7 - Chủ Nhật
+      br: Bữa Sáng
+      lu: Bữa Trưa
+      di: Bữa Tối
+      # Working place
+      working-place: ĐỊA ĐIỂM LÀM VIỆC
+  # Pages
+  pages:
+    # Home
+    home:
+      home: Trang Chủ   
+      about-us: VỀ CHÚNG TÔI
+      read-more: ĐỌC TIẾP
+      our-menu: THỰC ĐƠN 
+      all: TOÀN BỘ THỰC ĐƠN
+      breakfast: THỰC ĐƠN SÁNG
+      lunch: THỰC ĐƠN TRƯA
+      dinner: THỰC ĐƠN TỐI
+      drinks: ĐỒ UỐNG
+      others: KHÁC
+      order: ĐẶT HÀNG NGAY
+      view-more: HIỂN THỊ THÊM
+      reservation: ĐẶT BÀN TRƯỚC 
+      take-away: ĐẶT TRƯỚC ĐẾN LẤY
+      our-blog: Blog
+    about:
+      about: Về Chúng Tôi

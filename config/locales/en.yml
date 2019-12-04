@@ -30,4 +30,59 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # Layouts
+  layouts:
+    # Header
+    header:
+      home: Home
+      about: About Us
+      reservation: Reservation
+      menu: Menu
+      blog: Our blog
+      contact: Contact
+      cart: Cart
+      account: My Account
+      Vietnamese: Vietnamese
+      English: English
+      Languages: English
+    # Footer
+    footer:
+      # Information
+      infor: INFORMATION 
+      about: About Us
+      deli: Delivery Information
+      contact: Contact Us
+      term: Terms & Conditions
+      sitemap: Sitemap
+      # Working time
+      woti: WORKING TIME
+      mo-fr: Monday - Friday
+      sa-su: Saturday - Sunday
+      br: Breakfast
+      lu: Lunch
+      di: Dinner
+      # Working place
+      working-place: WORKING PLACE
+
+  # Pages
+  pages:
+    # Home
+    home:
+      home: Home
+      about-us: ABOUT OUR RESTAURANT FOOD & DRINKES
+      read-more: READ MORE
+      our-menu: OUR MENU
+      all: All
+      breakfast: BREAKFAST
+      lunch: LUNCH
+      dinner: DINNER
+      drinks: DRINKES
+      others: OTHERS
+      order: ORDER NOW
+      view-more: VIEW MORE
+      reservation: RESERVATION
+      take-away: TAKE AWAY
+      our-blog: OUR BLOG
+    about:
+      about: About
+
