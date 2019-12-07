@@ -34,55 +34,62 @@ en:
   layouts:
     # Header
     header:
-      home: Home
-      about: About Us
-      reservation: Reservation
-      menu: Menu
-      blog: Our blog
-      contact: Contact
-      cart: Cart
-      account: My Account
-      Vietnamese: Vietnamese
-      English: English
-      Languages: English
+      home: "Home"
+      about: "About Us"
+      reservation: "Reservation"
+      menu: "Menu"
+      blog: "Our blog"
+      contact: "Contact"
+      cart: "Cart"
+      account: "My Account"
+      Vietnamese: "Vietnamese"
+      English: "English"
+      Languages: "English"
+      log_in: "Log In"
+      sign_up: "Sign Up"
     # Footer
     footer:
       # Information
-      infor: INFORMATION 
-      about: About Us
-      deli: Delivery Information
-      contact: Contact Us
-      term: Terms & Conditions
-      sitemap: Sitemap
+      infor: "INFORMATION" 
+      about: "About Us"
+      deli: "Delivery Information"
+      contact: "Contact Us"
+      term: "Terms & Conditions"
+      sitemap: "Sitemap"
       # Working time
-      woti: WORKING TIME
-      mo-fr: Monday - Friday
-      sa-su: Saturday - Sunday
-      br: Breakfast
-      lu: Lunch
-      di: Dinner
+      woti: "WORKING TIME"
+      mo-fr: "Monday - Friday"
+      sa-su: "Saturday - Sunday"
+      br: "Breakfast"
+      lu: "Lunch"
+      di: "Dinner"
       # Working place
-      working-place: WORKING PLACE
+      working-place: "WORKING PLACE"
 
   # Pages
   pages:
     # Home
     home:
-      home: Home
-      about-us: ABOUT OUR RESTAURANT FOOD & DRINKES
-      read-more: READ MORE
-      our-menu: OUR MENU
-      all: All
-      breakfast: BREAKFAST
-      lunch: LUNCH
-      dinner: DINNER
-      drinks: DRINKES
-      others: OTHERS
-      order: ORDER NOW
-      view-more: VIEW MORE
-      reservation: RESERVATION
-      take-away: TAKE AWAY
-      our-blog: OUR BLOG
+      home: "Home"
+      about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
+      read-more: "READ MORE"
+      our-menu: "OUR MENU"
+      all: "All"
+      breakfast: "BREAKFAST"
+      lunch: "LUNCH"
+      dinner: "DINNER"
+      drinks: "DRINKES"
+      others: "OTHERS"
+      order: "ORDER NOW"
+      view-more: "VIEW MORE"
+      reservation: "RESERVATION"
+      take-away: "TAKE AWAY"
+      our-blog: "OUR BLOG"
     about:
-      about: About
-
+      about: "About"
+  devise: 
+    shared:
+      facebook_twitter_google:
+        sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
+        sign_up_with_google: "Sign up with Google +"
+        sign_up_with_facebook: "Sign up with FaceBook"

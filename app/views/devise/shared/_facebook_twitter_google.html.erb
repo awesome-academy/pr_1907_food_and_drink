@@ -1,0 +1,15 @@
+<div class="col-md-6">
+  <h2 class="pb-5 text-center"><%= t(".sign_up_with_facebook_or_google") %></h2>
+  <ul class="list-unstyled text-center mr-5">
+    <li>
+      <%= link_to t(".sign_up_with_google"), 
+        user_google_oauth2_omniauth_authorize_path, 
+        class: "btn btn-warning fa fa-google-plus" %>
+    </li>
+    <li class="pt-2">
+      <%= link_to t(".sign_up_with_facebook"), 
+        user_facebook_omniauth_authorize_path, class: 
+        "btn btn-primary fa fa-facebook" %>
+    </li>
+  </ul>
+</div>
