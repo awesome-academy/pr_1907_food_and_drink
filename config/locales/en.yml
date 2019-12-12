@@ -50,12 +50,13 @@ en:
     # Footer
     footer:
       # Information
-      infor: "INFORMATION" 
+      infor: "INFORMATION"
       about: "About Us"
       deli: "Delivery Information"
       contact: "Contact Us"
       term: "Terms & Conditions"
       sitemap: "Sitemap"
+
       # Working time
       woti: "WORKING TIME"
       mo-fr: "Monday - Friday"
@@ -87,7 +88,7 @@ en:
       our-blog: "OUR BLOG"
     about:
       about: "About"
-  devise: 
+  devise:
     shared:
       facebook_twitter_google:
         sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
