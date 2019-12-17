@@ -16,7 +16,7 @@ vi:
       Languages: "Tiếng Việt"
       log_in: "Đăng Nhập"
       sign_up: "Đăng Ký"
-    # Footer  
+    # Footer
     footer:
       # Information
       infor: "THÔNG TIN"
@@ -38,10 +38,10 @@ vi:
   pages:
     # Home
     home:
-      home: "Trang Chủ"   
+      home: "Trang Chủ"
       about-us: "VỀ CHÚNG TÔI"
       read-more: "ĐỌC TIẾP"
-      our-menu: "THỰC ĐƠN" 
+      our-menu: "THỰC ĐƠN"
       all: "TOÀN BỘ THỰC ĐƠN"
       breakfast: "THỰC ĐƠN SÁNG"
       lunch: "THỰC ĐƠN TRƯA"
@@ -50,15 +50,14 @@ vi:
       others: "KHÁC"
       order: "ĐẶT HÀNG NGAY"
       view-more: "HIỂN THỊ THÊM"
-      reservation: "ĐẶT BÀN TRƯỚC" 
+      reservation: "ĐẶT BÀN TRƯỚC"
       take-away: "ĐẶT TRƯỚC ĐẾN LẤY"
       our-blog: "Blog"
     about:
       about: "Về Chúng Tôi"
-  devise: 
+  devise:
     shared:
       facebook_twitter_google:
         sign_up_with_facebook_or_google: "Đăng Nhập Bằng Google Hoặc FaceBook"
         sign_up_with_google: "Đăng Nhập Bằng Google + "
         sign_up_with_facebook: "Đăng Nhập Băng FaceBook"
-        

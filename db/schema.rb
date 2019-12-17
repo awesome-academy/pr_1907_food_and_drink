@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 2019_12_07_155712) do
     t.index ["user_id_id"], name: "index_comments_on_user_id_id"
   end
 
+  create_table "models", force: :cascade do |t|
+    t.string "user"
+    t.string "email"
+    t.string "phone"
+    t.string "avatar"
+    t.string "password_digest"
+    t.string "remember_digest"
+    t.datetime "activated"
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "user_id_id"
     t.string "name"
