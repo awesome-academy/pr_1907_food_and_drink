@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered ewidth_tabl">
+        <tr class="background_tr">
+          <th><%= t(".image") %></th>
+          <th><%= t(".name") %></th>
+          <th><%= t(".price") %></th>
+          <th><%= t(".description") %></th>
+          <th><%= t(".status") %></th>
+          <th><%= t(".show") %></th>
+          <th><%= t(".edit") %></th>
+          <th><%= t(".delete") %></th>
+        </tr>
+        
+        <% @products.each do |product| %>
+        <tr>
+          <% picture_url =  product&.picture&.url %>
+          <% picture_url =
+            picture_url.present? ? picture_url : "default_image_product.jpg" %>
+          <th><%= image_tag picture_url ,
+            class: "img-responsive", size: "50x50" %></th>
+          <th><%= product.name %></th>
+          <th><%= product.price %></th>
+          <th><%= product.description %></th>
+          <th><%= product.status %></th>
+          <td><%= link_to t(".show"), admin_product_path(product.id) %></td>
+          <td><%= link_to t(".edit"), edit_admin_product_path(product.id) %></td>
+          <td><%= link_to t(".delete"), admin_product_path(product.id),
+            method: :delete,
+            data: { confirm: t(".are_you_sure") } %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

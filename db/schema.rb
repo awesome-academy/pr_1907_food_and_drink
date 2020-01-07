@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_07_155712) do
+ActiveRecord::Schema.define(version: 2019_12_24_071552) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2019_12_07_155712) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "user_id_id"
-    t.integer "product_id_id"
+    t.integer "user_id"
+    t.integer "product_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id_id"], name: "index_comments_on_product_id_id"
-    t.index ["user_id_id"], name: "index_comments_on_user_id_id"
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "models", force: :cascade do |t|
@@ -44,62 +44,50 @@ ActiveRecord::Schema.define(version: 2019_12_07_155712) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id_id"
+    t.integer "user_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_orders_on_user_id_id"
-  end
-
-  create_table "product_categories", force: :cascade do |t|
-    t.integer "product_id_id"
-    t.integer "category_id_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id_id"], name: "index_product_categories_on_category_id_id"
-    t.index ["product_id_id"], name: "index_product_categories_on_product_id_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "product_orders", force: :cascade do |t|
-    t.integer "order_id_id"
-    t.integer "product_id_id"
-    t.integer "quantity_id"
-    t.integer "price_id"
+    t.integer "order_id"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id_id"], name: "index_product_orders_on_order_id_id"
-    t.index ["price_id"], name: "index_product_orders_on_price_id"
-    t.index ["product_id_id"], name: "index_product_orders_on_product_id_id"
-    t.index ["quantity_id"], name: "index_product_orders_on_quantity_id"
+    t.index ["order_id"], name: "index_product_orders_on_order_id"
+    t.index ["product_id"], name: "index_product_orders_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.integer "price_id"
-    t.string "image"
+    t.integer "price"
     t.string "description"
     t.string "status"
-    t.string "product_order_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["price_id"], name: "index_products_on_price_id"
+    t.string "picture"
   end
 
   create_table "rates", force: :cascade do |t|
-    t.integer "user_id_id"
-    t.integer "product_id_id"
+    t.integer "user_id"
+    t.integer "product_id"
     t.string "star"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id_id"], name: "index_rates_on_product_id_id"
-    t.index ["user_id_id"], name: "index_rates_on_user_id_id"
+    t.index ["product_id"], name: "index_rates_on_product_id"
+    t.index ["user_id"], name: "index_rates_on_user_id"
   end
 
   create_table "suggest_items", force: :cascade do |t|
-    t.integer "user_id_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_suggest_items_on_user_id_id"
+    t.index ["user_id"], name: "index_suggest_items_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -128,6 +116,7 @@ ActiveRecord::Schema.define(version: 2019_12_07_155712) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.boolean "admin", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

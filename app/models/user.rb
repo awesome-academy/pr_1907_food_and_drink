@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :comments
   has_many :suggest_items
 
+  def role
+    role = self.admin? ? "Admin" : "Normal User"
+  end
+
   def self.find_for_google_oauth2(provider, uid, name, email, signed_in_resource = nil)
     user = User.where(:provider => provider, :uid => uid).first
     if user

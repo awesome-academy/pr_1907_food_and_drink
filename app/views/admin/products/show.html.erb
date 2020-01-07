@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered width_table">
+        <tr class="background_tr">
+          <th><%= t(".image") %></th>
+          <th><%= t(".name") %></th>
+          <th><%= t(".price") %></th>
+          <th><%= t(".description") %></th>
+          <th><%= t(".status") %></th>
+        </tr>
+        <tr>
+          <% picture_url = @product&.picture&.url %>
+          <% picture_url =
+            picture_url.present? ? picture_url : "default_image_product.jpg" %>
+          <th><%= image_tag picture_url ,
+            class: "img-responsive", size: "50x50" %></th>
+          <th><%= @product.name %></th>
+          <th><%= @product.price %></th>
+          <th><%= @product.description %></th>
+          <th><%= @product.status %></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
