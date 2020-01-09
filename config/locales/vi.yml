@@ -16,6 +16,10 @@ vi:
       Languages: "Tiếng Việt"
       log_in: "Đăng Nhập"
       sign_up: "Đăng Ký"
+      admin: "Tới trang quản lý"
+      account_setting: "Cài đặt người dùng"
+      change_password: "Đổi mật khẩu"
+      log_out: "Thoát"
     # Footer
     footer:
       # Information
@@ -61,3 +65,103 @@ vi:
         sign_up_with_facebook_or_google: "Đăng Nhập Bằng Google Hoặc FaceBook"
         sign_up_with_google: "Đăng Nhập Bằng Google + "
         sign_up_with_facebook: "Đăng Nhập Băng FaceBook"
+
+    # View of admin + Controller
+  admin:
+    categories:
+      # Controller admin
+      create_category: "Bạn đã tạo thể loại thành công!" 
+      update_category: "Bạn đã cập nhật thể loại thành công!" 
+      # end controller admin
+      edit:
+        edit_category : "Cập nhật thể loại"
+        update: "Cập nhật"
+      index: 
+        all_categories: "Toàn bộ thể loại"
+        create_new_category: "Tạo thể loại mới"
+        name: "Tên thể loại"
+        show_all_products: "Hiển thị toàn bộ sản phẩm"
+        edit: "Cập nhật thể loại"
+        delete: "Xoá thể loại"
+        are_you_sure: "Bạn có chắc chắn xoá thể loại này?"
+      new:
+        create_category: "Tạo thể loại"
+      show:
+        image: "Hình ảnh của sản phẩm"
+        name: "Tên của sản phẩm"
+        price: "Giá của sản phẩm"
+        description: "Mô tả của của sản phẩm"
+        status: "Trạng thái của sản phẩm. Còn hay hết"
+        show: "Hiện thị sản phẩm"
+        edit: "Cập nhật sản phẩm"
+        delete: "Xoá sản phẩm"
+        are_you_sure: "Bạn có chắc chắn xoá sản phẩm này?"
+    dashboard:
+      header_dashboard:
+        Languages: "Tiếng Việt"
+        English: "Tiếng Anh"
+        Vietnamese: "Tiếng Việt"
+        home: "Trang Chủ"
+        users: "Quản lý người dùng"
+        products: "Các sản phẩm"
+        categories: "Danh mục sản phẩm"
+        account_setting: "Cài đặt người dùng"
+        change_password: "Đổi mật khẩu"
+        log_out: "Thoát"
+    products:
+      # Controller admin
+      create_product: "Bạn đã tạo sản phẩm tạo thành công!"
+      update_product: "Bạn đã cập nhật sản phẩm thành công!"
+      # end controllers admin
+      index:
+        show_all_products: "Hiển thị toàn bộ sản phẩm"
+        create_new_product: "Tạo sản phẩm mới"
+        all_product: "Toàn bộ sản phẩm"
+      show:
+        image: "Ảnh của sản phẩm"
+        name: "Tên của sản phẩm"
+        price: "Giá của sản phẩm"
+        description: "Mô tả về sản phẩm"
+        status: "Trạng thái của sản phẩm. Còn hay hết"
+      new:
+        create_new_product: "Tạo sản phẩm mới"
+        create_product: "Tạo sản phẩm"
+      edit:
+        edit_product: "Cập nhật sản phẩm"
+        update_product: "Cập nhật sản phẩm"
+    users: 
+      # user controllers admin
+      create_user: "Bạn vừa tạo người dùng thành công!"
+      update_user: "Bạn vừa cập nhật thành công!"
+      # end user controller admin
+      index: 
+        all_user: "Toàn bộ người dùng"
+        create_new_user: "Tạo người dùng mới"
+        name: "Tên người dùng"
+        email: "Thư điện tử"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        role: "Vai trò"
+        show: "Hiển thị"
+        edit: "Cập nhật"
+        delete: "Xoá "
+        are_you_sure: "Bạn có chắc chắn xoá người dùng này?"
+      show:
+        name: "Tên người dùng"
+        email: "Thư điện tử"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        role: "Vai trò"
+        back_to_all_user: "Trở lại toàn bộ người dùng"
+      new:
+        create_a_new_user: "Tạo người dùng mới"
+        create_user: "Tạo người dùng"
+        admin: "Người quản trị"
+        normal_user: "Người dùng thường"
+      edit:
+        edit_user: "Cập nhật người dùng"
+        update_user: "Cập nhật người dùng"
+        admin: "Người quản trị"
+        normal_user: "Người dùng thường"
+
+          

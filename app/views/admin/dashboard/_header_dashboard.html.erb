@@ -18,10 +18,13 @@
             aria-expanded="false"><%= t(".Languages") %>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><%= link_to t(".English"), locale:"en", 
-              class: "dropdown-item"%></li>
-            <li><%= link_to t(".Vietnamese"), locale:"vi",  
-              class: "dropdown-item" %></li>
+            <li>
+              <%= link_to t(".English"), locale:"en", class: "dropdown-item"%>
+            </li>
+            <li>
+              <%= link_to t(".Vietnamese"), locale:"vi",  
+                class: "dropdown-item" %> 
+            </li>
           </div>
         </div>
         <!-- End language -->
@@ -30,31 +33,22 @@
           <%= link_to t(".home"), root_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-1">
-          <%= link_to t(".about"), about_path, class: "nav-link" %>
+          <%= link_to t(".users"), admin_users_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-1">
-          <%= link_to t(".reservation"), revervation_path, class: "nav-link" %>
+          <%= link_to t(".products"), admin_products_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-1">
-          <%= link_to t(".menu"), "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item mr-1">
-          <%= link_to t(".blog"), "#", class: "nav-link" %>
-        </li>
-        <!-- <li class="nav-item mr-1">
-          <%= link_to t(".contact"), "#", class: "nav-link" %>
-        </li> -->
-        <li class="nav-item mr-1">
-          <%= link_to t(".cart"), "#", 
-            class: "nav-link btn btn-info fa fa-cart-plus" %>
+          <%= link_to t(".categories"), admin_categories_path, 
+            class: "nav-link" %>
         </li>
 
         <% if !user_signed_in? %>
-          <li>
+          <li class="nav-item mr-1">
             <%= link_to t(".sign_up"), new_user_registration_path, 
               class: "nav-link btn btn-warning fa fa-user-plus" %>
           </li>
-          <li class="nav-item ml-1">
+          <li class="nav-item mr-1">
             <%= link_to t(".log_in"), new_user_session_path, 
               class: "nav-link btn btn-success fa fa-lock" %>
           </li>
@@ -69,9 +63,7 @@
                 <%= current_user.name %>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <%= link_to t(".admin"), admin_dashboard_index_path, 
-                  class: "dropdown-item" %>
-                <%= link_to t(".account_setting"), edit_user_registration_path, 
+                <%= link_to t(".account_setting"), "#", 
                   class: "dropdown-item" %>
                 <%= link_to t(".change_password"), "#", 
                   class: "dropdown-item" %>
@@ -79,28 +71,10 @@
                   method: :delete, class: "dropdown-item" %>
               </div>
             </div>
-
-          <% else %>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" 
-              id="dropdownMenuButton" data-toggle="dropdown" 
-              aria-haspopup="true" aria-expanded="false">
-
-              <%= current_user.name %>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t(".account_setting"), edit_user_registration_path, 
-                class: "dropdown-item" %>
-              <%= link_to t(".change_password"), "#", class: "dropdown-item" %>
-              <%= link_to t(".log_out"),destroy_user_session_path, 
-                method: :delete, class: "dropdown-item" %>
-            </div>
-          </div>
-          <% end %>  
+          <% end %>
         </li>
         <% end %>
       </ul>
     </div>
   </div>
 </header>
-

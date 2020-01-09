@@ -30,67 +30,164 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  # Layouts
-  layouts:
-    # Header
-    header:
-      home: "Home"
-      about: "About Us"
-      reservation: "Reservation"
-      menu: "Menu"
-      blog: "Our blog"
-      contact: "Contact"
-      cart: "Cart"
-      account: "My Account"
-      Vietnamese: "Vietnamese"
-      English: "English"
-      Languages: "English"
-      log_in: "Log In"
-      sign_up: "Sign Up"
-    # Footer
-    footer:
-      # Information
-      infor: "INFORMATION"
-      about: "About Us"
-      deli: "Delivery Information"
-      contact: "Contact Us"
-      term: "Terms & Conditions"
-      sitemap: "Sitemap"
+  views:
+    # Layouts
+    layouts:
+      # Header
+      header:
+        home: "Home"
+        about: "About Us"
+        reservation: "Reservation"
+        menu: "Menu"
+        blog: "Our blog"
+        contact: "Contact"
+        cart: "Cart"
+        account: "My Account"
+        Vietnamese: "Vietnamese"
+        English: "English"
+        Languages: "English"
+        log_in: "Log In"
+        sign_up: "Sign Up"
+        admin: "Admin"
+        account_setting: "Account Setting"
+        change_password: "Change password"
+        log_out: "Log out"
+      # Footer
+      footer:
+        # Information
+        infor: "INFORMATION"
+        about: "About Us"
+        deli: "Delivery Information"
+        contact: "Contact Us"
+        term: "Terms & Conditions"
+        sitemap: "Sitemap"
 
-      # Working time
-      woti: "WORKING TIME"
-      mo-fr: "Monday - Friday"
-      sa-su: "Saturday - Sunday"
-      br: "Breakfast"
-      lu: "Lunch"
-      di: "Dinner"
-      # Working place
-      working-place: "WORKING PLACE"
+        # Working time
+        woti: "WORKING TIME"
+        mo-fr: "Monday - Friday"
+        sa-su: "Saturday - Sunday"
+        br: "Breakfast"
+        lu: "Lunch"
+        di: "Dinner"
+        # Working place
+        working-place: "WORKING PLACE"
 
-  # Pages
-  pages:
-    # Home
-    home:
-      home: "Home"
-      about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
-      read-more: "READ MORE"
-      our-menu: "OUR MENU"
-      all: "All"
-      breakfast: "BREAKFAST"
-      lunch: "LUNCH"
-      dinner: "DINNER"
-      drinks: "DRINKES"
-      others: "OTHERS"
-      order: "ORDER NOW"
-      view-more: "VIEW MORE"
-      reservation: "RESERVATION"
-      take-away: "TAKE AWAY"
-      our-blog: "OUR BLOG"
-    about:
-      about: "About"
-  devise:
-    shared:
-      facebook_twitter_google:
-        sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
-        sign_up_with_google: "Sign up with Google +"
-        sign_up_with_facebook: "Sign up with FaceBook"
+    # Pages
+    pages:
+      # Home
+      home:
+        home: "Home"
+        about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
+        read-more: "READ MORE"
+        our-menu: "OUR MENU"
+        all: "All"
+        breakfast: "BREAKFAST"
+        lunch: "LUNCH"
+        dinner: "DINNER"
+        drinks: "DRINKES"
+        others: "OTHERS"
+        order: "ORDER NOW"
+        view-more: "VIEW MORE"
+        reservation: "RESERVATION"
+        take-away: "TAKE AWAY"
+        our-blog: "OUR BLOG"
+      about:
+        about: "About"
+    devise:
+      shared:
+        facebook_twitter_google:
+          sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
+          sign_up_with_google: "Sign up with Google +"
+          sign_up_with_facebook: "Sign up with FaceBook"
+    
+    # View of admin
+    admin:
+      categories:
+        edit:
+          edit_category: "Edit category"
+          update: "Update"
+        index: 
+          all_categories: "All categores"
+          create_new_category: "Create new category"
+          name: "Name"
+          show_all_products: "Show all produtcs"
+          edit: "Edit"
+          delete: "Destroy"
+          are_you_sure: "Are you sure to delete this category?"
+        new:
+          create_category: "Create Category"
+        show:
+          image: "Image"
+          name: "Name"
+          price: "Price"
+          description: "Description"
+          status: "Status"
+          show: "Show"
+          edit: "Edit"
+          delete: "Destroy"
+          are_you_sure: "Are you sure to delete this product?"
+      dashboard:
+        header_dashboard:
+          Languages: "English"
+          English: "English"
+          Vietnamese: "Vietnamese"
+          home: "Home"
+          users: "Users"
+          products: "Products"
+          categories: "Categories"
+          account_setting: "Account Setting"
+          change_password: "Change password"
+          log_out: "Log out"
+      products:
+        create_product: "Product create!"
+        update_product: "product updated!"
+        index:
+          show_all_products: "Show all products"
+          create_new_product: "Create a new product"
+          all_product: "All products"
+        show:
+          image: "Image"
+          name: "Name"
+          price: "Price"
+          description: "Description"
+          status: "Status"
+        new:
+          create_new_product: "Create a new product"
+          create_product: "Create product"
+        edit:
+          edit_product: "Edit product" 
+          update_product: "Update product"
+      users:
+        # admin controller
+        create_user: "User created!"
+        update_user: "User update!"
+        # end admin controller
+        index: 
+          all_user: "All users"
+          create_new_user: "Create new user"
+          name: "Name"
+          email: "Email"
+          address: "Address"
+          phone: "Phone"
+          role: "Role"
+          show: "Show"
+          edit: "Edit"
+          delete: "Destroy"
+          are_you_sure: "Are you sure to delete this user?"
+        show:
+          name: "Name"
+          email: "Email"
+          address: "Address"
+          phone: "Phone"
+          role: "Role"
+          back_to_all_user: "Back to all users"
+        new:
+          create_a_new_user: "Create a new user"
+          create_user: "Create user"
+          admin: "Admin"
+          normal_user: "Normal user"
+        edit:
+          edit_user: "Edit user"
+          update_user: "Update user"
+          admin: "Admin"
+          normal_user: "Normal user"

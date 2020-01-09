@@ -1,0 +1,30 @@
+<% provide :title, t(".all_user") %>
+<%= link_to t(".create_new_user"),  new_admin_user_path, 
+class: "btn btn-primary mb-1" %>
+
+<table class="table table-bordered width_table">
+  <tr class="background_tr">
+    <th><%= t(".name") %></th>
+    <th><%= t(".email") %></th> 
+    <th><%= t(".address") %></th>
+    <th><%= t(".phone") %></th>
+    <th><%= t(".role") %></th>
+    <th><%= t(".show") %></th>
+    <th><%= t(".edit") %></th>
+    <th><%= t(".delete") %></th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.address %></td>
+      <td><%= user.phone %></td>
+      <td><%= user.role %></td>
+      <td><%= link_to t(".show"), admin_user_path(user.id) %></td>
+      <td><%= link_to t(".edit"), edit_admin_user_path(user.id) %></td>
+      <td><%= link_to t(".delete"), admin_user_path(user.id),
+        method: :delete,
+        data: { confirm: t(".are_you_sure") } %></td>
+    </tr>
+  <% end %>
+</table>
