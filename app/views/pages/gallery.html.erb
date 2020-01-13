@@ -1,0 +1,36 @@
+<% provide :title, t(".gallery") %>
+<div class="row ">
+  <div class="col-sm-12 commontop text-center">
+    <h4>our gallery</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur placerat nulla, in suscipit erat sodales id. Nullam ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis nulla.</p>
+    <hr>
+  </div>
+  <% @products.each do |product| %>
+    <div class="col-sm-4 galery">
+      <div class="image">
+        <% url = product.picture.url.nil? ? "" : product.picture.url %>
+        <%= link_to image_tag url, class: "img-responsive" %>
+        <div class="middle">
+          <button type="button" data-toggle="modal" data-target="#product-<%= product.id %>">
+            <span class="icon" title="User Profile">
+              <img src="https://cdn0.iconfinder.com/data/icons/simplie-essential-action/22/action_021-add-new-plus-increase-512.png" alt="Avatar" class="small-icon">
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal fade" id="product-<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <%= link_to image_tag url, class: "img-responsive" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="col-sm-12 commontop text-center">
+    <button type="button" class="btn btn-primary"> View more
+    </button>
+  </div>
+</div>

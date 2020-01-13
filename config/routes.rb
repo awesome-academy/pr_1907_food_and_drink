@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "/about", to: "pages#about"
     get "/revervation", to: "pages#revervation"
     resources :products
+    get "/gallery", to: "pages#gallery"
   end
   namespace :admin do 
     root "dashboard#index"
