@@ -6,7 +6,6 @@ class Admin::CategoriesController < Admin::BaseController
 
   def show
     @category = Category.find_by id: params[:id]
-    @products = @category.products
     redirect_to root_path unless @category
   end
 
