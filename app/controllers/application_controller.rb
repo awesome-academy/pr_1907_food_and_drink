@@ -1,6 +1,18 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
+  
+  helper_method :current_order 
+
+  def current_order
+    if !session[:order_id].nil?
+      Order.find(session[:order_id])
+    elsif current_user 
+      current_user.orders.new order_status_id: 1
+    else
+      Order.new
+    end
+  end
 
   protected
   def configure_permitted_parameters

@@ -44,9 +44,8 @@
         <!-- <li class="nav-item mr-1">
           <%= link_to t(".contact"), "#", class: "nav-link" %>
         </li> -->
-        <li class="nav-item mr-1">
-          <%= link_to t(".cart"), "#", 
-            class: "nav-link btn btn-info fa fa-cart-plus" %>
+        <li class="nav-item mr-1 cart-text">
+          <%= render "carts/cart_text" %>
         </li>
 
         <% if !user_signed_in? %>
@@ -73,7 +72,7 @@
                   class: "dropdown-item" %>
                 <%= link_to t(".account_setting"), edit_user_registration_path, 
                   class: "dropdown-item" %>
-                <%= link_to t(".change_password"), "#", 
+                <%= link_to t(".change_password"), edit_user_registration_path, 
                   class: "dropdown-item" %>
                 <%= link_to t(".log_out"),destroy_user_session_path, 
                   method: :delete, class: "dropdown-item" %>
@@ -91,7 +90,8 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <%= link_to t(".account_setting"), edit_user_registration_path, 
                 class: "dropdown-item" %>
-              <%= link_to t(".change_password"), "#", class: "dropdown-item" %>
+              <%= link_to t(".change_password"), edit_user_registration_path, 
+                class: "dropdown-item" %>
               <%= link_to t(".log_out"),destroy_user_session_path, 
                 method: :delete, class: "dropdown-item" %>
             </div>

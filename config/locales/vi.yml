@@ -70,6 +70,11 @@ vi:
         we_need_your_current_password_to_confirm_your_changes: "Chúng tôi cần mật khẩu hiện tại của bạn để xác nhận sự thay đổi"
 
     # View of admin + Controller
+  # Cart
+  order_items:
+    create:
+      must_login: "Bạn cần đăng nhập trước khi đặt hàng"
+
   admin:
     categories:
       # Controller admin

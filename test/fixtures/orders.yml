@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: one
-  name: MyString
+  subtotal: 9.99
+  tax: 9.99
+  shipping: 9.99
+  total: 9.99
+  order_status: one
+  user: one
 
 two:
-  user_id: two
-  name: MyString
+  subtotal: 9.99
+  tax: 9.99
+  shipping: 9.99
+  total: 9.99
+  order_status: two
+  user: two

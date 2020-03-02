@@ -99,7 +99,11 @@ en:
           sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
           sign_up_with_google: "Sign up with Google +"
           sign_up_with_facebook: "Sign up with FaceBook"
-    
+  # Cart
+  order_items:
+    create:
+      must_login: "You must login before order"
+
     # View of admin
     admin:
       categories:

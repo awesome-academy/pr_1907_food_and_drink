@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'order_items/create'
+  # get 'order_items/update'
+  # get 'order_items/destroy'
+  # get 'carts/show'
+  # get 'product_orders/index'
   # For details on the DSL available within this file, see
   # http://guides.rubyonrails.org/routing.html
 
@@ -6,8 +11,10 @@ Rails.application.routes.draw do
     root "pages#home"
     get "/about", to: "pages#about"
     get "/revervation", to: "pages#revervation"
-    resources :products
     get "/gallery", to: "pages#gallery"
+    resources :products, only: :index
+    resource :cart, only: :show
+    resources :order_items, only: [:create, :update, :destroy]
   end
   namespace :admin do
     root "dashboard#index"
