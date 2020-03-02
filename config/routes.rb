@@ -9,16 +9,15 @@ Rails.application.routes.draw do
     resources :products
     get "/gallery", to: "pages#gallery"
   end
-  namespace :admin do 
+  namespace :admin do
     root "dashboard#index"
     get "dashboard/index"
     resources :categories
     resources :products
-    resources :users 
+    resources :users
   end
 
   devise_for :users, path: '', path_names: { sign_in: 'login',
     sign_out: 'logout', edit: "profile", confirmation: "confirmation", },
-    controllers: { omniauth_callbacks: "omniauth_callbacks",
-    registrations: "registrations"}
+    controllers: { omniauth_callbacks: "omniauth_callbacks"}
 end

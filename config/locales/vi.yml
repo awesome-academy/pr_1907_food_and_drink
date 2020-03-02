@@ -65,18 +65,21 @@ vi:
         sign_up_with_facebook_or_google: "Đăng Nhập Bằng Google Hoặc FaceBook"
         sign_up_with_google: "Đăng Nhập Bằng Google + "
         sign_up_with_facebook: "Đăng Nhập Băng FaceBook"
+    registrations:
+      edit:
+        we_need_your_current_password_to_confirm_your_changes: "Chúng tôi cần mật khẩu hiện tại của bạn để xác nhận sự thay đổi"
 
     # View of admin + Controller
   admin:
     categories:
       # Controller admin
-      create_category: "Bạn đã tạo thể loại thành công!" 
-      update_category: "Bạn đã cập nhật thể loại thành công!" 
+      create_category: "Bạn đã tạo thể loại thành công!"
+      update_category: "Bạn đã cập nhật thể loại thành công!"
       # end controller admin
       edit:
         edit_category : "Cập nhật thể loại"
         update: "Cập nhật"
-      index: 
+      index:
         all_categories: "Toàn bộ thể loại"
         create_new_category: "Tạo thể loại mới"
         name: "Tên thể loại"
@@ -129,12 +132,12 @@ vi:
       edit:
         edit_product: "Cập nhật sản phẩm"
         update_product: "Cập nhật sản phẩm"
-    users: 
+    users:
       # user controllers admin
       create_user: "Bạn vừa tạo người dùng thành công!"
       update_user: "Bạn vừa cập nhật thành công!"
       # end user controller admin
-      index: 
+      index:
         all_user: "Toàn bộ người dùng"
         create_new_user: "Tạo người dùng mới"
         name: "Tên người dùng"
@@ -164,4 +167,4 @@ vi:
         admin: "Người quản trị"
         normal_user: "Người dùng thường"
 
-          
+
