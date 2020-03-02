@@ -11,6 +11,10 @@ class Product < ApplicationRecord
                                     only_integer: true }
   validates :category_id, presence: true
   validate :picture_size
+  
+  def self.get_random_products_for_home_page
+    self.order("RANDOM()").limit(12)
+  end
 
   private
   def picture_size

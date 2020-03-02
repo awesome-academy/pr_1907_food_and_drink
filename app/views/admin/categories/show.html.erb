@@ -13,7 +13,7 @@
           <th><%= t(".delete") %></th>
         </tr>
         
-        <% @products.each do |product| %>
+        <% @category.products.each do |product| %>
         <tr>
           <% picture_url =  product&.picture&.url %>
           <% picture_url =

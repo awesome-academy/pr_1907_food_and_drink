@@ -1,0 +1,22 @@
+<%= provide :title,  "All Products" %>
+<div class="container"> 
+  <div class="row mt-2">
+    <% @products.each do |product| %>
+      <div class="col-sm-4">
+        <div class="card">
+          <% picture_url = product&.picture&.url %>
+          <% picture_url =  picture_url.present? ? picture_url : "default_image_product.jpg" %>
+          <%= image_tag picture_url, class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text">
+              <%= product.description %>
+            </p>
+            <p><small class="text-success">Price:</small> $ <%= product.price %></p>
+            <%= link_to t(".order"), "#", class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -2,103 +2,18 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-md-8">
-      <div id="carouselExampleCaptions" class="carousel slide" 
-        dinforide="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" 
-            class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= image_tag("carousel/banner3.jpg", class: "img-responsive d-block
-              w-100") %>
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              <%= link_to "Order now", "#", class: "btn btn-primary"  %>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag("carousel/banner1.jpg", class: "img-responsive d-block 
-              w-100") %>
-            <div class="carousel-caption d-none d-md-block text-right">
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <%= link_to "Order now", "#", class: "btn btn-primary"  %>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag("carousel/banner2.jpg", class: "img-responsive d-block 
-              w-100") %>
-            <div class="carousel-caption d-none d-md-block text-left">w
-              <h5>Third slide label</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-              <%= link_to "Order now", "#", class: "btn btn-primary"  %>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" 
-          role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" 
-          role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+      <%= render "carousel" %>
     </div> <!-- Het carousel -->
     <div class="col-md-4">
       <div class="row">
-        <div class="col-md-4">
-        <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
+      <% @products.each do |product| %>
+        <div class="col-md-4 mt-1">
+          <%= link_to product do %>
+            <%= image_tag product.picture.url, class: "img-fluid" %>
+          <% end %>
         </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/12.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/13.jpg", class: "img-fluid") %>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
-        <%= link_to image_tag("carousel/13.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/12.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
-        <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/12.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/13.jpg", class: "img-fluid") %>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-4">
-        <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
-        </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("carousel/11.jpg", class: "img-fluid") %>
-        </div>
-      </div>
+      <% end %>
+    </div>
     </div>
   </div> <!-- Het row 1 -->
 </div> <!-- Het container carousel-->
@@ -167,101 +82,46 @@
         <div class="menu-item ">
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-all-tab" 
-                data-toggle="tab" href="#nav-all" role="tab" 
-                aria-controls="nav-all" aria-selected="true"><%= t(".all") %>
-              </a>
-              <a class="nav-item nav-link" id="nav-breakfast-tab" 
-                data-toggle="tab" href="#nav-breakfast" role="tab" 
-                aria-controls="nav-breakfast" aria-selected="false">
-                <%= t(".breakfast") %>
-              </a>
-              <a class="nav-item nav-link" id="nav-lunch-tab" data-toggle="tab" 
-                href="#nav-lunch" role="tab" aria-controls="nav-contact" 
-                aria-selected="false"><%= t(".lunch") %>
-              </a>
-              <a class="nav-item nav-link" id="nav-dinner-tab" data-toggle="tab"
-                href="#nav-dinner" role="tab" aria-controls="nav-dinner" 
-                aria-selected="false"><%= t(".dinner") %>
-              </a>
-              <a class="nav-item nav-link" id="nav-drinks-tab" data-toggle="tab" 
-                href="#nav-drinks" role="tab" aria-controls="nav-drinks" 
-                aria-selected="false"><%= t(".drinks") %>
-              </a>
-              <a class="nav-item nav-link" id="nav-others-tab" data-toggle="tab" 
-                href="#nav-others" role="tab" aria-controls="nav-drinks" 
-                aria-selected="false"><%= t(".others") %>
-              </a>
+              <% @categories.each do |category| %>
+                <% status = (category == Category.first) ? "active" : "" %>
+                <a class="nav-item nav-link <%= status %>" id="nav-all-tab" 
+                  data-toggle="tab" href="#nav-category-<%= category.id %>" role="tab" 
+                  aria-controls="nav-all" aria-selected="true">
+                  <%= category.name  %>
+                </a>
+              <% end %>
             </div>
           </nav>
+
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-all" role="tabpanel" 
-              aria-labelledby="nav-all-tab">
-              <div class="container">
-                <div class="row mt-2">
-                  <div class="col-sm-4">
-                    <div class="card">
-                      <%= image_tag("all/01.jpg", class: "card-img-top") %>
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on
-                          the card title and make up the bulk of the card's 
-                          content.
-                        </p>
-                        <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
+            <% @categories.each do |category| %>
+              <% status = (category == Category.first) ? "active" : "" %>
+              <div class="tab-pane fade show <%= status %>" 
+                id="nav-category-<%= category.id %>" role="tabpanel" 
+                aria-labelledby="nav-all-tab">
+                <div class="container">
+                  <div class="row mt-2">
+                    <% category.products.each do |product| %>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <% picture_url = product&.picture&.url %>
+                          <% picture_url =  picture_url.present? ? picture_url : "default_image_product.jpg" %>
+                          <%= image_tag picture_url, class: "card-img-top" %>
+                          <div class="card-body">
+                            <h5 class="card-title"><%= product.name %></h5>
+                            <p class="card-text">
+                              <%= product.description %>
+                            </p>
+                            <p><small class="text-success">Price:</small> $ <%= product.price %></p>
+                            <%= link_to t(".order"), "#", class: "btn btn-primary" %>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="card">
-                      <%= image_tag("all/01.jpg", class: "card-img-top") %>
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and 
-                          make up the bulk of the card's content.
-                        </p>
-                        <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="card">
-                      <%= image_tag("all/01.jpg", class: "card-img-top") %>
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and 
-                          make up the bulk of the card's content.
-                        </p>
-                        <p><small class="text-success">Price:</small> $35.00</p>
-                        <%= link_to t(".order"), "#", class: "btn btn-primary" %>
-                      </div>
-                    </div>
+                    <% end %>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="tab-pane fade" id="nav-breakfast" role="tabpanel" 
-              aria-labelledby="nav-breakfast-tab">Breakfast
-            </div>
-            <div class="tab-pane fade" id="nav-lunch" role="tabpanel" 
-              aria-labelledby="nav-lunch-tab">lunch
-            </div>
-            <div class="tab-pane fade" id="nav-dinner" role="tabpanel" 
-              aria-labelledby="nav-dinner-tab">dinner
-            </div>
-            <div class="tab-pane fade" id="nav-drinks" role="tabpanel" 
-              aria-labelledby="nav-drinks-tab">drinks
-            </div>
-            <div class="tab-pane fade" id="nav-others" role="tabpanel" 
-            aria-labelledby="nav-others-tab">others
-          </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -269,11 +129,10 @@
 
     <div class="row pt-3 text-center">  <!-- VIEW MORE -->
       <div class="col-sm-12">
-        <%= link_to t(".view-more"), "#", class: "btn btn-outline-info" %> 
+        <%= link_to t(".view-more"), products_path, class: "btn btn-outline-info" %> 
         <hr>
       </div>
     </div>  <!-- Het row View more -->
-    
   </div>  <!-- Het container -->
 </div>  <!-- Het div menu -->
   
