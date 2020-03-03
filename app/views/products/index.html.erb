@@ -8,12 +8,15 @@
           <% picture_url =  picture_url.present? ? picture_url : "default_image_product.jpg" %>
           <%= image_tag picture_url, class: "card-img-top" %>
           <div class="card-body">
-            <h5 class="card-title"><%= product.name %></h5>
             <p class="card-text">
               <%= product.description %>
             </p>
-            <p><small class="text-success">Price:</small> $ <%= product.price %></p>
-            <%= link_to t(".order"), "#", class: "btn btn-primary" %>
+            <%= form_for @order_item, remote: true do |f| %>
+              <h5 class="card-title"><%= product.name %></h5>
+              <p><small class="text-success">Price:</small> $ <%= product.price %></p>
+              <%= f.hidden_field :product_id %>
+              <%= link_to t(".order"), class: "btn btn-primary" %>
+            <% end %>
           </div>
         </div>
       </div>

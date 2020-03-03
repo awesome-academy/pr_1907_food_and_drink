@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :category
 
-  has_many :product_order
+  has_many :order_items
   has_many :rates
   has_many :comments
   
@@ -15,7 +15,7 @@ class Product < ApplicationRecord
   def self.get_random_products_for_home_page
     self.order("RANDOM()").limit(12)
   end
-
+  
   private
   def picture_size
     if picture.size > 5.megabytes
