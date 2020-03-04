@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :rates
   has_many :comments
   has_many :suggest_items
-
+  
   def role
     role = self.admin? ? "Admin" : "Normal User"
   end
@@ -61,8 +61,8 @@ class User < ApplicationRecord
     else
       registered_user = User.where(:email => email).first
       if registered_user
-        registered_user.skip_confirmation!
-        registered_user.skip_confirmation_notification!
+        # registered_user.skip_confirmation!
+        # registered_user.skip_confirmation_notification!
         registered_user.save
         return registered_user
       else

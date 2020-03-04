@@ -1,5 +1,4 @@
 class Order < ApplicationRecord
-  belongs_to :order_status
   belongs_to :user
   
   before_create :set_order_status
@@ -8,13 +7,15 @@ class Order < ApplicationRecord
 
   has_many :order_items
 
+  enum status: {"đang đặt hàng": 0, "đã đặt hàng": 1, "đã giao hàng": 2, "huỷ đơn": 3}
+
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
   end
 
   private
   def set_order_status
-    self.order_status_id = 1
+    self.status = "đang đặt hàng"
   end
 
   def update_subtotal

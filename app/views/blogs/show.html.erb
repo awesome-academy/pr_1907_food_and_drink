@@ -1,0 +1,21 @@
+<%= provide :title,  t(".blogs") %>
+<div class="container"> 
+  <div class="row mt-2">
+    <div class="col-sm-4">
+      <div class="card">
+        <% picture_url = @product&.picture&.url %>
+        <% picture_url = picture_url.present? ? picture_url : "default_image_product.jpg" %>
+        <%= image_tag picture_url, class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-text">
+            <%= @product.price %>
+          </p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-sm-8">
+      <%= @product.body.html_safe %>
+    </div>
+  </div>
+</div>
