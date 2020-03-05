@@ -28,6 +28,11 @@
       <%= f.text_field :status, class: "form-control" %>
     </div>
 
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.cktext_area :body, rows: 10, class: "form-control" %>
+    </div>
+
     <div class="field mt-2">
       <%= f.label :category_id %>
       <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] },

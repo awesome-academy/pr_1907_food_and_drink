@@ -12,29 +12,27 @@
         w-100") %>
       <!-- <img src="..." class="d-block w-100" alt="..."> -->
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        <%= link_to "Order now", "#", class: "btn btn-primary"  %>
+        <h5 class="text-success"><%= t(".label_1") %></h5>
+        <p class="text-uppercase text-primary"><%= t(".label_2") %></p>
+        <%= link_to t(".detail"), products_path, class: "btn btn-primary"  %>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("carousel/banner1.jpg", class: "img-responsive d-block 
         w-100") %>
       <div class="carousel-caption d-none d-md-block text-right">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <%= link_to "Order now", "#", class: "btn btn-primary"  %>
+        <h5 class="text-success"><%= t(".label_1") %></h5>
+        <p class="text-uppercase text-primary"><%= t(".label_2") %></p>
+        <%= link_to t(".detail"), products_path, class: "btn btn-primary"  %>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag("carousel/banner2.jpg", class: "img-responsive d-block 
         w-100") %>
       <div class="carousel-caption d-none d-md-block text-left">w
-        <h5>Third slide label</h5>
-        <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-        </p>
-        <%= link_to "Order now", "#", class: "btn btn-primary"  %>
+        <h5 class="text-success"><%= t(".label_1") %></h5>
+        <p class="text-uppercase text-primary"><%= t(".label_2") %></p>
+        <%= link_to t(".detail"), products_path, class: "btn btn-primary"  %>
       </div>
     </div>
   </div>

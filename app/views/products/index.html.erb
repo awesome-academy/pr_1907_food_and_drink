@@ -1,4 +1,4 @@
-<%= provide :title,  "All Products" %>
+<%= provide :title,  t(".all_products") %>
 <div class="container"> 
   <div class="row mt-2">
     <% @products.each do |product| %>
@@ -12,10 +12,19 @@
               <%= product.description %>
             </p>
             <%= form_for @order_item, remote: true do |f| %>
-              <h5 class="card-title"><%= product.name %></h5>
-              <p><small class="text-success">Price:</small> $ <%= product.price %></p>
-              <%= f.hidden_field :product_id %>
-              <%= link_to t(".order"), class: "btn btn-primary" %>
+              <p class="text-right">
+                <span class="text-muted">Unit Price: </span> 
+                <span class="text-success"><%= number_to_currency product.price %> </span>
+              </p>
+              <div class="input-group">
+                <%= f.number_field :quantity, value: 1, class: "form-control col-sm-3 product-quantity-input", min: 1 %>
+                <div class="input-group-btn col-sm-9">
+                  <div class="row block">
+                    <%= f.hidden_field :product_id, value: product.id %>
+                    <%= f.submit t(".order"), class: "btn btn-primary float-right" %>
+                  </div>
+                </div>
+              </div>
             <% end %>
           </div>
         </div>
