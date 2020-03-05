@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   # get 'order_items/create'
   # get 'order_items/update'
   # get 'order_items/destroy'
@@ -12,12 +13,17 @@ Rails.application.routes.draw do
     get "/about", to: "pages#about"
     get "/revervation", to: "pages#revervation"
     get "/gallery", to: "pages#gallery"
-    resources :products, only: :index
+    get "index", to: "blogs#index"
+    resources :blogs, only: [:index, :show]
     resource :cart, only: :show
     resources :order_items, only: [:create, :update, :destroy]
+
+    resources :products do 
+      resources :reviews
+    end
   end
   namespace :admin do
-    root "dashboard#index"
+    root "categories#index"
     get "dashboard/index"
     resources :categories
     resources :products

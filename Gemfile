@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.5"
 
-gem "rails", "~> 5.2.3"
+gem "rails", "~> 5.2.4.2"
 gem "sqlite3"
 gem "puma", "~> 3.11"
 gem "sass-rails", "~> 5.0"
@@ -37,6 +37,8 @@ gem "bootstrap-will_paginate", "~> 1.0"
 
 gem "carrierwave", "~> 2.0", ">= 2.0.2"
 gem "mini_magick"
+gem "ckeditor"
+gem "paperclip"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console

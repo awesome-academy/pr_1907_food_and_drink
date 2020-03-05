@@ -9,13 +9,10 @@
 <% end %>
 
 <% if @order_items.size == 0 %>
-  <p class="text-center">
-    There are no item in your shopping cart. Please <%= link_to "go back",
-      root_path %> and add some items to your cart.
-  </p>
+  <h2 class="text-center mt-5 mb-5 text-info">
+    <%= t(".message_01") %> <%= link_to t(".go_back"), products_path %> 
+    <%= t(".message_02") %>
+  </h2>
 <% else %>
-  <% @order_items.each do |order_item| %> 
-    <%= render "carts/cart_row", product: order_item.product, 
-      order_item: order_item %>
-  <% end %>
+    <%= render "carts/cart_row", order_items: @order_items %>
 <% end %>

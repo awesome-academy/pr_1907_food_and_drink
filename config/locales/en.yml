@@ -1,197 +1,275 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  views:
-    # Layouts
-    layouts:
-      # Header
-      header:
-        home: "Home"
-        about: "About Us"
-        reservation: "Reservation"
-        menu: "Menu"
-        blog: "Our blog"
-        contact: "Contact"
-        cart: "Cart"
-        account: "My Account"
-        Vietnamese: "Vietnamese"
-        English: "English"
-        Languages: "English"
-        log_in: "Log In"
-        sign_up: "Sign Up"
-        admin: "Admin"
-        account_setting: "Account Setting"
-        change_password: "Change password"
-        log_out: "Log out"
-      # Footer
-      footer:
-        # Information
-        infor: "INFORMATION"
-        about: "About Us"
-        deli: "Delivery Information"
-        contact: "Contact Us"
-        term: "Terms & Conditions"
-        sitemap: "Sitemap"
+  # Layouts
+  layouts:
+    # Header
+    header:
+      home: "Home"
+      about: "About Us"
+      reservation: "Reservation"
+      menu: "Menu"
+      blog: "Our blog"
+      contact: "Contact"
+      cart: "Cart"
+      account: "My Account"
+      Vietnamese: "Vietnamese"
+      English: "English"
+      Languages: "English"
+      log_in: "Log In"
+      sign_up: "Sign Up"
+      admin: "Admin"
+      account_setting: "Account Setting"
+      change_password: "Change password"
+      log_out: "Log out"
+    # Footer
+    footer:
+      # Information
+      infor: "INFORMATION"
+      about: "About Us"
+      deli: "Delivery Information"
+      contact: "Contact Us"
+      term: "Terms & Conditions"
+      sitemap: "Sitemap"
 
-        # Working time
-        woti: "WORKING TIME"
-        mo-fr: "Monday - Friday"
-        sa-su: "Saturday - Sunday"
-        br: "Breakfast"
-        lu: "Lunch"
-        di: "Dinner"
-        # Working place
-        working-place: "WORKING PLACE"
+      # Working time
+      woti: "WORKING TIME"
+      mo-fr: "Monday - Friday"
+      sa-su: "Saturday - Sunday"
+      br: "Breakfast"
+      lu: "Lunch"
+      di: "Dinner"
+      # Working place
+      working-place: "WORKING PLACE"
+  # Pages
+  pages:
+    # Home
+    home:
+      home: "Home"
+      about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
+      read-more: "READ MORE"
+      our-menu: "OUR MENU"
+      all: "All"
+      breakfast: "BREAKFAST"
+      lunch: "LUNCH"
+      dinner: "DINNER"
+      drinks: "DRINKES"
+      others: "OTHERS"
+      order: "ORDER NOW"
+      view-more: "VIEW MORE"
+      reservation: "RESERVATION"
+      take-away: "TAKE AWAY"
+      our-blog: "OUR BLOG"
+      paragraph_1: "Sydney was once a city whose best restaurants all came with 
+        high price tags and glistening water views. And while those places are 
+        still worth seeking out, a visit here wouldn’t be complete without 
+        trying some of the smaller."
+      paragraph_2: "Owned by a father and his sons, Shenkin is a true Sydney 
+        standby. This casual Israeli cafe started small and has since grown to 
+        four locations with full kitchens (all serve breakfast and lunch, the 
+        Enmore location also serves dinner Thursday-Saturday) and a separate 
+        espresso bar in Newtown. But they all still very much feel like 
+        family-run businesses. Shenkin’s menu includes things like flaky pasties 
+        filled with cheese, meat, and spinach, green and red shakshukas, and 
+        large plates of housemade dips with flatbread - the kind of food we’d 
+        be happy to eat pretty much anytime. There are a few things you must do 
+        when you come to Sydney: see the Opera House, lie out on Bondi Beach, 
+        and, if you’d like to spend a lot of money to be semi-terrified, climb 
+        the Harbour Bridge. Eating a lamington - a cube of sponge cake dipped in 
+        chocolate and covered in coconut - should also be on that list, and Flour 
+        and Stone’s version (they soak theirs in panna cotta) is the best one in 
+        the city. The bakery is small and popular, so if you can’t find a 
+        table to sit with your coffee and cake, take it all"  
+      paragraph_3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
+          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
+          ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis 
+          nulla."
 
-    # Pages
-    pages:
-      # Home
-      home:
-        home: "Home"
-        about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
-        read-more: "READ MORE"
-        our-menu: "OUR MENU"
-        all: "All"
-        breakfast: "BREAKFAST"
-        lunch: "LUNCH"
-        dinner: "DINNER"
-        drinks: "DRINKES"
-        others: "OTHERS"
-        order: "ORDER NOW"
-        view-more: "VIEW MORE"
-        reservation: "RESERVATION"
-        take-away: "TAKE AWAY"
-        our-blog: "OUR BLOG"
-      about:
-        about: "About"
-    devise:
+    about:
+      about: "About"
+      about-us: "ABOUT OUR RESTAURANT FOOD & DRINKES"
+      paragraph_1: "Sydney was once a city whose best restaurants all came with 
+        high price tags and glistening water views. And while those places are 
+        still worth seeking out, a visit here wouldn’t be complete without 
+        trying some of the smaller."
+      paragraph_2: "Owned by a father and his sons, Shenkin is a true Sydney 
+        standby. This casual Israeli cafe started small and has since grown to 
+        four locations with full kitchens (all serve breakfast and lunch, the 
+        Enmore location also serves dinner Thursday-Saturday) and a separate 
+        espresso bar in Newtown. But they all still very much feel like 
+        family-run businesses. Shenkin’s menu includes things like flaky pasties 
+        filled with cheese, meat, and spinach, green and red shakshukas, and 
+        large plates of housemade dips with flatbread - the kind of food we’d 
+        be happy to eat pretty much anytime. There are a few things you must do 
+        when you come to Sydney: see the Opera House, lie out on Bondi Beach, 
+        and, if you’d like to spend a lot of money to be semi-terrified, climb 
+        the Harbour Bridge. Eating a lamington - a cube of sponge cake dipped in 
+        chocolate and covered in coconut - should also be on that list, and Flour 
+        and Stone’s version (they soak theirs in panna cotta) is the best one in 
+        the city. The bakery is small and popular, so if you can’t find a 
+        table to sit with your coffee and cake, take it all"
+      our_services: "Our Services"
+      paragraph_3: "His casual Israeli cafe started small and has since grown to 
+        four locations with full kitchens. Shenkin’s menu includes things like 
+        flaky pasties.There are a few things you must do when you come to Sydney: 
+        see the Opera House."
+      Best_Chef: "Best Chef"
+      chef: "Shenkin’s menu includes things like flaky pasties 
+        filled with cheese, meat, and spinach, green and red shakshukas, and 
+        large plates of housemade dips with flatbread - the kind of food we’d 
+        be happy to eat pretty much anytime. There are a few things you must do."
+      tables: "More than 150 tables"
+      Best_Vines: "Best Vines"
+      Special_Offers: "Special Offers"
+      Card_Payment: "Card Payment"
+      Terrace: "Terrace"
+      Our_team: "Our team"
+    carousel:
+        label_1: "Where you can enjoy with your family."
+        label_2: "Good foods, health food"
+        detail: "MORE DETAIL" 
+
+  devise:
       shared:
         facebook_twitter_google:
           sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
           sign_up_with_google: "Sign up with Google +"
           sign_up_with_facebook: "Sign up with FaceBook"
-  # Cart
+   # Cart
   order_items:
     create:
       must_login: "You must login before order"
 
-    # View of admin
-    admin:
-      categories:
-        edit:
-          edit_category: "Edit category"
-          update: "Update"
-        index: 
-          all_categories: "All categores"
-          create_new_category: "Create new category"
-          name: "Name"
-          show_all_products: "Show all produtcs"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this category?"
-        new:
-          create_category: "Create Category"
-        show:
-          image: "Image"
-          name: "Name"
-          price: "Price"
-          description: "Description"
-          status: "Status"
-          show: "Show"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this product?"
-      dashboard:
-        header_dashboard:
-          Languages: "English"
-          English: "English"
-          Vietnamese: "Vietnamese"
-          home: "Home"
-          users: "Users"
-          products: "Products"
-          categories: "Categories"
-          account_setting: "Account Setting"
-          change_password: "Change password"
-          log_out: "Log out"
-      products:
-        create_product: "Product create!"
-        update_product: "product updated!"
-        index:
-          show_all_products: "Show all products"
-          create_new_product: "Create a new product"
-          all_product: "All products"
-        show:
-          image: "Image"
-          name: "Name"
-          price: "Price"
-          description: "Description"
-          status: "Status"
-        new:
-          create_new_product: "Create a new product"
-          create_product: "Create product"
-        edit:
-          edit_product: "Edit product" 
-          update_product: "Update product"
-      users:
-        # admin controller
-        create_user: "User created!"
-        update_user: "User update!"
-        # end admin controller
-        index: 
-          all_user: "All users"
-          create_new_user: "Create new user"
-          name: "Name"
-          email: "Email"
-          address: "Address"
-          phone: "Phone"
-          role: "Role"
-          show: "Show"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this user?"
-        show:
-          name: "Name"
-          email: "Email"
-          address: "Address"
-          phone: "Phone"
-          role: "Role"
-          back_to_all_user: "Back to all users"
-        new:
-          create_a_new_user: "Create a new user"
-          create_user: "Create user"
-          admin: "Admin"
-          normal_user: "Normal user"
-        edit:
-          edit_user: "Edit user"
-          update_user: "Update user"
-          admin: "Admin"
-          normal_user: "Normal user"
+  products:
+    index: 
+      all_products: "Toàn Bộ Sản Phẩn"
+      order: "ĐẶT HÀNG NGAY"
+  carts:
+    cart_row: 
+      item_ordered: "Sản phẩm" 
+      quantity: "Số Lượng"
+      unit_price: "Thành tiền"
+    shopping_cart:
+      message_01: "Hiện tại không có sản phẩm nào trong giỏ hàng của bạn. Làm 
+        ơn"
+      message_02: "và thêm sản phẩm vào giỏ hàng của bạn."
+      go_back: "Quay Trở Lại Trang Sản Phẩm"
+    cart_text:
+      items: "Sản Phẩm"
+  blogs:
+    index:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+    show:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+      average_rating: "Đánh giá trung bình"
+      based_on: "Dựa vào"
+      reviews: "lượt đánh giá"
+      add_review: "Đánh Giá"
+      back: "Trở lại"
+  reviews:
+    form:
+      rating: "Cho sao:"
+      comment: "Bình luận"
+      create_comment: "Tạo bình luận"
+    review:
+      edit: "Sửa bình luận"
+      delete: "Xoá"
+      are_you_sure: "Bạn muốn xoá bình luận?"
+    edit: 
+      edit_review: "Sửa đánh giá"  
+    new:
+      new_review: "Tạo đánh giá"
+
+
+  # View of admin
+  admin:
+    categories:
+      edit:
+        edit_category: "Edit category"
+        update: "Update"
+      index: 
+        all_categories: "All categores"
+        create_new_category: "Create new category"
+        name: "Name"
+        show_all_products: "Show all produtcs"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this category?"
+      new:
+        create_category: "Create Category"
+      show:
+        image: "Image"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        status: "Status"
+        show: "Show"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this product?"
+    dashboard:
+      header_dashboard:
+        Languages: "English"
+        English: "English"
+        Vietnamese: "Vietnamese"
+        home: "Home"
+        users: "Users"
+        products: "Products"
+        categories: "Categories"
+        account_setting: "Account Setting"
+        change_password: "Change password"
+        log_out: "Log out"
+    products:
+      create_product: "Product create!"
+      update_product: "product updated!"
+      index:
+        show_all_products: "Show all products"
+        create_new_product: "Create a new product"
+        all_product: "All products"
+      show:
+        image: "Image"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        status: "Status"
+      new:
+        create_new_product: "Create a new product"
+        create_product: "Create product"
+      edit:
+        edit_product: "Edit product" 
+        update_product: "Update product"
+    users:
+      # admin controller
+      create_user: "User created!"
+      update_user: "User update!"
+      # end admin controller
+      index: 
+        all_user: "All users"
+        create_new_user: "Create new user"
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        role: "Role"
+        show: "Show"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this user?"
+      show:
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        role: "Role"
+        back_to_all_user: "Back to all users"
+      new:
+        create_a_new_user: "Create a new user"
+        create_user: "Create user"
+        admin: "Admin"
+        normal_user: "Normal user"
+      edit:
+        edit_user: "Edit user"
+        update_user: "Update user"
+        admin: "Admin"
+        normal_user: "Normal user"
+

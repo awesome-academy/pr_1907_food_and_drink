@@ -1,0 +1,26 @@
+<div class="container"> 
+  <div class="row mt-2">
+    <div class="col-sm-4">
+      <div class="card">
+        <% picture_url = @product&.picture&.url %>
+        <% picture_url = picture_url.present? ? picture_url : "default_image_product.jpg" %>
+        <%= image_tag picture_url, class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-text">
+            <%= @product.description %>
+          </p>
+        </div>
+      </div>
+      <div>
+        <%= render @product.reviews %>
+      </div>
+      <div>
+        <%= link_to "Add Review", new_product_review_path(@product) %>
+      </div>
+      <%= link_to "Back", root_path, class: "btn btn-outline-secondary mt-2" %>
+    </div>
+    <div class="col-sm-8">
+      <%= @product.body.html_safe %>
+    </div>
+  </div>
+</div>

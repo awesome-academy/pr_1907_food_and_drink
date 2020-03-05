@@ -1,4 +1,4 @@
-vi:
+ vi:
   # Layouts
   layouts:
     # Header
@@ -57,8 +57,73 @@ vi:
       reservation: "ĐẶT BÀN TRƯỚC"
       take-away: "ĐẶT TRƯỚC ĐẾN LẤY"
       our-blog: "Blog"
+      paragraph_1: "Bạn yêu mùa đông Hà Nội vì điều gì? Điều gì khiến cái mùa 
+        rét mướt, không khí hanh hao, dăm ba ngày lại có thể có một cơn gió mùa 
+        cắt da cắt thịt như thách thức tinh thần đi làm này lại hấp dẫn đối 
+        với bạn?"
+      paragraph_2: "Ai đó sẽ nói rằng, mùa đông Hà Nội là mùa của tình yêu, là 
+        mùa gọi người ta ngồi sát bên nhau hơn, mùa của những bàn tay đan cài 
+        vào nhau, mùa của những nụ hôn và cái ôm thật chặt. Người khác có thể 
+        yêu mùa đông vì nó gợi nhắc đến không khí Tết rất gần, đến một mùa đoàn 
+        viên ấm áp… Nhưng với phần đông người khác, mùa đông chỉ thật sự đáng 
+        yêu là bởi vì nó có… quà chiều, vì nó là mùa ăn gì cũng ngon, và cảm 
+        giác được thưởng thức những món ăn đặc trưng của mùa lẫn trong cơn lạnh 
+        xuýt xoa của phố xá làm người ta phải lòng. Quà chiều mùa đông là một 
+        cái thú ẩm thực kỳ lạ ở Hà Nội. Nó không thuộc kiểu “nhất định phải có” 
+        như bữa trưa, bữa tối, nó không chậm rãi, nhẩn nha như bữa sáng khi bắt 
+        đầu một ngày mới, đương nhiên khác hẳn với bữa ăn đêm ngoài đường phố mà 
+        những ai về nhà đi ngủ trước 11h khuya chẳng bao giờ biết được. Buổi 
+        chiều, đó là thời điểm nhộn nhịp nhất của phố xá, khi dân công sở tan 
+        làm, học sinh sinh viên tan học, các hàng quán cũng rộn ràng kẻ ra người 
+        vào. Đó là khi, người Hà Nội nhấm nháp thú vui ẩm thực vào thời điểm giữa 
+        ngày: quà chiều."
+      paragraph_3: "Các bạn có thể chọn cho mình những món ăn đặc trưng của 
+        nhà hàng như đồ ăn thức uống, lẩu bánh gạo hay mỳ cay nóng hổi, hoặc
+        chọn cho mình những món thú vị, kích thích vị giác cả những khi nghĩ đến.
+        Chất lượng món ăn."
     about:
       about: "Về Chúng Tôi"
+      about-us: "VỀ CHÚNG TÔI"
+      paragraph_1: "Bạn yêu mùa đông Hà Nội vì điều gì? Điều gì khiến cái mùa 
+        rét mướt, không khí hanh hao, dăm ba ngày lại có thể có một cơn gió mùa 
+        cắt da cắt thịt như thách thức tinh thần đi làm này lại hấp dẫn đối 
+        với bạn?"
+      paragraph_2: "Ai đó sẽ nói rằng, mùa đông Hà Nội là mùa của tình yêu, là 
+        mùa gọi người ta ngồi sát bên nhau hơn, mùa của những bàn tay đan cài 
+        vào nhau, mùa của những nụ hôn và cái ôm thật chặt. Người khác có thể 
+        yêu mùa đông vì nó gợi nhắc đến không khí Tết rất gần, đến một mùa đoàn 
+        viên ấm áp… Nhưng với phần đông người khác, mùa đông chỉ thật sự đáng 
+        yêu là bởi vì nó có… quà chiều, vì nó là mùa ăn gì cũng ngon, và cảm 
+        giác được thưởng thức những món ăn đặc trưng của mùa lẫn trong cơn lạnh 
+        xuýt xoa của phố xá làm người ta phải lòng. Quà chiều mùa đông là một 
+        cái thú ẩm thực kỳ lạ ở Hà Nội. Nó không thuộc kiểu “nhất định phải có” 
+        như bữa trưa, bữa tối, nó không chậm rãi, nhẩn nha như bữa sáng khi bắt 
+        đầu một ngày mới, đương nhiên khác hẳn với bữa ăn đêm ngoài đường phố mà 
+        những ai về nhà đi ngủ trước 11h khuya chẳng bao giờ biết được. Buổi 
+        chiều, đó là thời điểm nhộn nhịp nhất của phố xá, khi dân công sở tan 
+        làm, học sinh sinh viên tan học, các hàng quán cũng rộn ràng kẻ ra người 
+        vào. Đó là khi, người Hà Nội nhấm nháp thú vui ẩm thực vào thời điểm giữa 
+        ngày: quà chiều."
+      our_services: "Dịch Vụ Của Chúng Tôi"
+      paragraph_3: "Ai đó sẽ nói rằng, mùa đông Hà Nội là mùa của tình yêu, là 
+        mùa gọi người ta ngồi sát bên nhau hơn, mùa của những bàn tay đan cài 
+        vào nhau, mùa của những nụ hôn và cái ôm thật chặt. Người khác có thể 
+        yêu mùa đông vì nó gợi nhắc đến không khí Tết rất gần, đến một mùa đoàn"
+      Best_Chef: "Các Đầu Bếp Giỏi"
+      chef: "Một đầu bếp giỏi không phải đơn giản là việc bạn thực hành thường 
+        xuyên mà có được, mà điều đó còn phụ thuộc vào cả lý thuyết mà bạn đã 
+        được học.Hơn thế nữa các ẩm thực vùng miền."
+      tables: "Chúng Tôi Có Hơn 150 Bàn Phục Vụ"
+      Best_Vines: "Rượu Nổi Tiếng"
+      Special_Offers: "Ưu Đãi Đặc Biệt"
+      Card_Payment: "Thanh Toán Bằng Thẻ"
+      Terrace: "Đặc Biệt Có Bàn Trên Sân Thượng"
+      Our_team: "Đội Ngũ Đầu Bếp Của Chúng Tôi"
+    carousel:
+      label_1: "Nơi bạn tận hưởng cuộc sống cùng gia đình bạn."
+      label_2: "Cùng với thức ăn ngon và đảm bảo cho sức khoẻ."
+      detail: "Xem Thêm"
+
   devise:
     shared:
       facebook_twitter_google:
@@ -68,12 +133,53 @@ vi:
     registrations:
       edit:
         we_need_your_current_password_to_confirm_your_changes: "Chúng tôi cần mật khẩu hiện tại của bạn để xác nhận sự thay đổi"
-
-    # View of admin + Controller
+   
   # Cart
   order_items:
     create:
       must_login: "Bạn cần đăng nhập trước khi đặt hàng"
+  
+  products:
+    index: 
+      all_products: "Toàn Bộ Sản Phẩn"
+      order: "ĐẶT HÀNG NGAY"
+  carts:
+    cart_row: 
+      item_ordered: "Sản phẩm" 
+      quantity: "Số Lượng"
+      unit_price: "Thành tiền"
+    shopping_cart:
+      message_01: "Hiện tại không có sản phẩm nào trong giỏ hàng của bạn. Làm 
+        ơn"
+      message_02: "và thêm sản phẩm vào giỏ hàng của bạn."
+      go_back: "Quay Trở Lại Trang Sản Phẩm"
+    cart_text:
+      items: "Sản Phẩm"
+  blogs:
+    index:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+    show:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+      average_rating: "Đánh giá trung bình"
+      based_on: "Dựa vào"
+      reviews: "lượt đánh giá"
+      add_review: "Đánh Giá"
+      back: "Trở lại"
+  reviews:
+    form:
+      rating: "Cho sao:"
+      comment: "Bình luận"
+      create_comment: "Tạo bình luận"
+    review:
+      edit: "Sửa bình luận"
+      delete: "Xoá"
+      are_you_sure: "Bạn muốn xoá bình luận?"
+    edit: 
+      edit_review: "Sửa đánh giá"  
+    new:
+      new_review: "Tạo đánh giá"
 
   admin:
     categories:
@@ -171,5 +277,3 @@ vi:
         update_user: "Cập nhật người dùng"
         admin: "Người quản trị"
         normal_user: "Người dùng thường"
-
-

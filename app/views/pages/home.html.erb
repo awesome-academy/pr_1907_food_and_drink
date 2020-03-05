@@ -1,13 +1,13 @@
 <% provide :title, t(".home") %>
 <div class="container mt-3">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-sm-8">
       <%= render "carousel" %>
     </div> <!-- Het carousel -->
-    <div class="col-md-4">
+    <div class="col-sm-4">
       <div class="row">
       <% @products.each do |product| %>
-        <div class="col-md-4 mt-1">
+        <div class="col-sm-6 mt-1 pr-0">
           <%= link_to products_path do %>
             <%= image_tag product.picture.url, class: "img-fluid" %>
           <% end %>
@@ -15,7 +15,7 @@
       <% end %>
     </div>
     </div>
-  </div> <!-- Het row 1 -->
+  </div> <indexet row 1 -->
 </div> <!-- Het container carousel-->
 
 <div class="about container mt-2"> 
@@ -29,29 +29,9 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <p class="mb-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan.
-        </p>
+        <p class="mb-3 text-muted"><%= t(".paragraph_1") %></p>
         <hr style="color: #ff8000";>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Nullam efficitur placerat nulla, in 
-          suscipit erat sodales id. Nullam ultricies eu turpis at accumsan. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Nullam efficitur placerat nulla, in 
-          suscipit erat sodales id. Nullam ultricies eu turpis at accumsan. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Nullam efficitur placerat nulla, in 
-          suscipit erat sodales id.
-        </p>
+        <p class="text-muted"><%= t(".paragraph_2") %></p>
         <%= link_to t(".read-more"), about_path, class: "btn btn-info mt-3" %>
       </div>
       <div class="col-md-6">
@@ -67,11 +47,8 @@
     <div class="row">
       <div class="col-sm-12">
         <h3 class="text-center"><%= t(".our-menu") %></h3>
-        <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis 
-          nulla.
+        <p class="text-center text-secondary">
+          <%= t(".paragraph_3") %>
         </p>
         <hr style="background-color: yellow;">
       </div>
@@ -112,15 +89,18 @@
                             <p class="card-text">
                               <%= product.description %>
                             </p>
-                            <p><small class="text-success">Price:</small> $ <%= product.price %></p>
-                            <%= link_to t(".order"), class: "btn btn-primary" %>
                             <%= form_for @order_item, remote: true do |f| %>
-                              <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
+                              <p class="text-right">
+                                <span class="text-muted">Unit Price: </span> 
+                                <span class="text-success"><%= number_to_currency product.price %> </span>
+                              </p>
                               <div class="input-group">
-                                <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-                                <div class="input-group-btn">
-                                  <%= f.hidden_field :product_id, value: product.id %>
-                                  <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+                                <%= f.number_field :quantity, value: 1, class: "form-control col-sm-3 product-quantity-input", min: 1 %>
+                                <div class="input-group-btn col-sm-9">
+                                  <div class="row block">
+                                    <%= f.hidden_field :product_id, value: product.id %>
+                                    <%= f.submit t(".order"), class: "btn btn-primary float-right" %>
+                                  </div>
                                 </div>
                               </div>
                             <% end %>
@@ -152,10 +132,7 @@
       <div class="col-sm-12">
         <h2 class="text-secondary text-center"><%= t(".reservation") %></h2>
         <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis 
-          nulla.
+          <%= t(".paragraph_3") %>
         </p>
       </div>
     </div>
@@ -177,56 +154,36 @@
     <div class="row">
       <div class="col-sm-12">
         <h5 class="text-center"><%= t(".our-blog") %> </h5>
-        <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam 
-          efficitur placerat nulla, in suscipit erat sodales id. Nullam 
-          ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis 
-          nulla.
+        <p class="text-center text-secondary">
+          <%= t(".paragraph_1") %>
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
+    <div class="row mt-2">
+    <% @products.each do |product| %>
+      <div class="col-sm-4">
         <div class="card">
-          <%= image_tag("blog/1.jpg", class: "card-img-top") %>
+          <% picture_url = product&.picture&.url %>
+          <% picture_url =  picture_url.present? ? picture_url : "default_image_product.jpg" %>
+          <%= image_tag picture_url, class: "card-img-top" %>
           <div class="card-body">
-            <p class="text-muted">Dec 05, 2019 / By admin/ 10 comments</p>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card 
-              title and make up the bulk of the card's content.
+            <p class="text-muted">
+              <%= l product.created_at, format: :short %> / By admin
             </p>
-            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
+            <p class="card-text">
+              <%= product.description %>
+            </p>
+            <%= link_to t(".read-more"), blog_path(product.id), class: "btn btn-primary" %>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <%= image_tag("blog/1.jpg", class: "card-img-top") %>
-          <div class="card-body">
-            <p class="text-muted">Dec 05, 2019 / By admin/ 10 comments</p>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card 
-              title and make up the bulk of the card's content.
-            </p>
-            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <%= image_tag("blog/1.jpg", class: "card-img-top") %>
-          <div class="card-body">
-            <p class="text-muted">Dec 05, 2019 / By admin/ 10 comments</p>
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card 
-              title and make up the bulk of the card's content.
-            </p>
-            <%= link_to t(".read-more"), "#", class: "btn btn-primary" %>
-          </div>
-        </div>
+    <% end %>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-12 text-center">
+        <%= link_to t(".view-more"), index_path, 
+          class: "btn btn-outline-info text-center" %> 
       </div>
     </div>
   </div>

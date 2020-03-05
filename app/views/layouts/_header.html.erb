@@ -39,11 +39,8 @@
           <%= link_to t(".menu"), products_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-1">
-          <%= link_to t(".blog"), "#", class: "nav-link" %>
+          <%= link_to t(".blog"), index_path, class: "nav-link" %>
         </li>
-        <!-- <li class="nav-item mr-1">
-          <%= link_to t(".contact"), "#", class: "nav-link" %>
-        </li> -->
         <li class="nav-item mr-1 cart-text">
           <%= render "carts/cart_text" %>
         </li>
@@ -68,14 +65,8 @@
                 <%= current_user.name %>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <%= link_to t(".admin"), admin_dashboard_index_path, 
+                <%= link_to t(".admin"), admin_root_path, 
                   class: "dropdown-item" %>
-                <%= link_to t(".account_setting"), edit_user_registration_path, 
-                  class: "dropdown-item" %>
-                <%= link_to t(".change_password"), edit_user_registration_path, 
-                  class: "dropdown-item" %>
-                <%= link_to t(".log_out"),destroy_user_session_path, 
-                  method: :delete, class: "dropdown-item" %>
               </div>
             </div>
 
@@ -88,8 +79,6 @@
               <%= current_user.name %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t(".account_setting"), edit_user_registration_path, 
-                class: "dropdown-item" %>
               <%= link_to t(".change_password"), edit_user_registration_path, 
                 class: "dropdown-item" %>
               <%= link_to t(".log_out"),destroy_user_session_path, 
