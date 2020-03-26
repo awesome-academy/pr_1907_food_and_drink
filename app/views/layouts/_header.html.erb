@@ -67,12 +67,6 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <%= link_to t(".admin"), admin_root_path, 
                   class: "dropdown-item" %>
-                <%= link_to t(".account_setting"), edit_user_registration_path, 
-                  class: "dropdown-item" %>
-                <%= link_to t(".change_password"), edit_user_registration_path, 
-                  class: "dropdown-item" %>
-                <%= link_to t(".log_out"),destroy_user_session_path, 
-                  method: :delete, class: "dropdown-item" %>
               </div>
             </div>
 
@@ -85,8 +79,6 @@
               <%= current_user.name %>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <%= link_to t(".account_setting"), edit_user_registration_path, 
-                class: "dropdown-item" %>
               <%= link_to t(".change_password"), edit_user_registration_path, 
                 class: "dropdown-item" %>
               <%= link_to t(".log_out"),destroy_user_session_path, 

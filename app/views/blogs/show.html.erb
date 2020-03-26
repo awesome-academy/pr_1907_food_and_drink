@@ -8,14 +8,49 @@
         <%= image_tag picture_url, class: "card-img-top" %>
         <div class="card-body">
           <p class="card-text">
-            <%= @product.price %>
+            <%= @product.description %>
           </p>
         </div>
       </div>
-      
+      <div class="mt-3">
+        <h4 class="avg-rating"><%= t(".average_rating") %></h4>
+        <div class="average-review-rating" data-score=<%= @average_review %>></div>
+        <span class="number-of-reviews"><%= t(".based_on") %> 
+          <%= @product.reviews.count %> <%= t(".reviews") %>
+        </span>
+        </div>
+      <div>
+        <hr>
+        <%= render @product.reviews %>
+      </div>
+      <div class="mt-3">
+        <%= link_to t(".add_review"), new_product_review_path(@product),
+          class: "btn btn-outline-info" %>
+      </div>
+      <%= link_to t(".back"), root_path, class: "btn btn-outline-secondary mt-2" %>
     </div>
     <div class="col-sm-8">
       <%= @product.body.html_safe %>
     </div>
   </div>
 </div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script

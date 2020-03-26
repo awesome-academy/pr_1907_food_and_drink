@@ -1,4 +1,4 @@
-vi:
+ vi:
   # Layouts
   layouts:
     # Header
@@ -119,12 +119,11 @@ vi:
       Card_Payment: "Thanh Toán Bằng Thẻ"
       Terrace: "Đặc Biệt Có Bàn Trên Sân Thượng"
       Our_team: "Đội Ngũ Đầu Bếp Của Chúng Tôi"
-
-
     carousel:
       label_1: "Nơi bạn tận hưởng cuộc sống cùng gia đình bạn."
       label_2: "Cùng với thức ăn ngon và đảm bảo cho sức khoẻ."
       detail: "Xem Thêm"
+
   devise:
     shared:
       facebook_twitter_google:
@@ -134,12 +133,53 @@ vi:
     registrations:
       edit:
         we_need_your_current_password_to_confirm_your_changes: "Chúng tôi cần mật khẩu hiện tại của bạn để xác nhận sự thay đổi"
-
-    # View of admin + Controller
+   
   # Cart
   order_items:
     create:
       must_login: "Bạn cần đăng nhập trước khi đặt hàng"
+  
+  products:
+    index: 
+      all_products: "Toàn Bộ Sản Phẩn"
+      order: "ĐẶT HÀNG NGAY"
+  carts:
+    cart_row: 
+      item_ordered: "Sản phẩm" 
+      quantity: "Số Lượng"
+      unit_price: "Thành tiền"
+    shopping_cart:
+      message_01: "Hiện tại không có sản phẩm nào trong giỏ hàng của bạn. Làm 
+        ơn"
+      message_02: "và thêm sản phẩm vào giỏ hàng của bạn."
+      go_back: "Quay Trở Lại Trang Sản Phẩm"
+    cart_text:
+      items: "Sản Phẩm"
+  blogs:
+    index:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+    show:
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+      average_rating: "Đánh giá trung bình"
+      based_on: "Dựa vào"
+      reviews: "lượt đánh giá"
+      add_review: "Đánh Giá"
+      back: "Trở lại"
+  reviews:
+    form:
+      rating: "Cho sao:"
+      comment: "Bình luận"
+      create_comment: "Tạo bình luận"
+    review:
+      edit: "Sửa bình luận"
+      delete: "Xoá"
+      are_you_sure: "Bạn muốn xoá bình luận?"
+    edit: 
+      edit_review: "Sửa đánh giá"  
+    new:
+      new_review: "Tạo đánh giá"
 
   admin:
     categories:
@@ -237,27 +277,3 @@ vi:
         update_user: "Cập nhật người dùng"
         admin: "Người quản trị"
         normal_user: "Người dùng thường"
-
-  products:
-    index: 
-      all_products: "Toàn Bộ Sản Phẩn"
-      order: "ĐẶT HÀNG NGAY"
-  carts:
-    cart_row: 
-      item_ordered: "Sản phẩm" 
-      quantity: "Số Lượng"
-      unit_price: "Thành tiền"
-    shopping_cart:
-      message_01: "Hiện tại không có sản phẩm nào trong giỏ hàng của bạn. Làm 
-        ơn"
-      message_02: "và thêm sản phẩm vào giỏ hàng của bạn."
-      go_back: "Quay Trở Lại Trang Sản Phẩm"
-    cart_text:
-      items: "Sản Phẩm"
-  blogs:
-    index:
-      blogs: "Blogs" 
-      read-more: "Đọc tiếp"
-    show:
-      blogs: "Blogs" 
-      read-more: "Đọc tiếp"

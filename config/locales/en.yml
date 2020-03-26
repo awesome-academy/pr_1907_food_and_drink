@@ -1,38 +1,5 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  views:
-
-    # Layouts
+  # Layouts
   layouts:
     # Header
     header:
@@ -72,8 +39,7 @@ en:
       di: "Dinner"
       # Working place
       working-place: "WORKING PLACE"
-
-    # Pages
+  # Pages
   pages:
     # Home
     home:
@@ -156,134 +122,154 @@ en:
       Card_Payment: "Card Payment"
       Terrace: "Terrace"
       Our_team: "Our team"
-
     carousel:
-      label_1: "Where you can enjoy with your family."
-      label_2: "Good foods, health food"
-      detail: "MORE DETAIL" 
+        label_1: "Where you can enjoy with your family."
+        label_2: "Good foods, health food"
+        detail: "MORE DETAIL" 
 
-    devise:
+  devise:
       shared:
         facebook_twitter_google:
           sign_up_with_facebook_or_google: "Sign Up With Google Or Facebook"
           sign_up_with_google: "Sign up with Google +"
           sign_up_with_facebook: "Sign up with FaceBook"
-  # Cart
+   # Cart
   order_items:
     create:
       must_login: "You must login before order"
 
-    # View of admin
-    admin:
-      categories:
-        edit:
-          edit_category: "Edit category"
-          update: "Update"
-        index: 
-          all_categories: "All categores"
-          create_new_category: "Create new category"
-          name: "Name"
-          show_all_products: "Show all produtcs"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this category?"
-        new:
-          create_category: "Create Category"
-        show:
-          image: "Image"
-          name: "Name"
-          price: "Price"
-          description: "Description"
-          status: "Status"
-          show: "Show"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this product?"
-      dashboard:
-        header_dashboard:
-          Languages: "English"
-          English: "English"
-          Vietnamese: "Vietnamese"
-          home: "Home"
-          users: "Users"
-          products: "Products"
-          categories: "Categories"
-          account_setting: "Account Setting"
-          change_password: "Change password"
-          log_out: "Log out"
-      products:
-        create_product: "Product create!"
-        update_product: "product updated!"
-        index:
-          show_all_products: "Show all products"
-          create_new_product: "Create a new product"
-          all_product: "All products"
-        show:
-          image: "Image"
-          name: "Name"
-          price: "Price"
-          description: "Description"
-          status: "Status"
-        new:
-          create_new_product: "Create a new product"
-          create_product: "Create product"
-        edit:
-          edit_product: "Edit product" 
-          update_product: "Update product"
-      users:
-        # admin controller
-        create_user: "User created!"
-        update_user: "User update!"
-        # end admin controller
-        index: 
-          all_user: "All users"
-          create_new_user: "Create new user"
-          name: "Name"
-          email: "Email"
-          address: "Address"
-          phone: "Phone"
-          role: "Role"
-          show: "Show"
-          edit: "Edit"
-          delete: "Destroy"
-          are_you_sure: "Are you sure to delete this user?"
-        show:
-          name: "Name"
-          email: "Email"
-          address: "Address"
-          phone: "Phone"
-          role: "Role"
-          back_to_all_user: "Back to all users"
-        new:
-          create_a_new_user: "Create a new user"
-          create_user: "Create user"
-          admin: "Admin"
-          normal_user: "Normal user"
-        edit:
-          edit_user: "Edit user"
-          update_user: "Update user"
-          admin: "Admin"
-          normal_user: "Normal user"
   products:
     index: 
-      all_products: "All Products"
-      order: "ORDER NOW"
+      all_products: "Toàn Bộ Sản Phẩn"
+      order: "ĐẶT HÀNG NGAY"
   carts:
     cart_row: 
-      item_ordered: "Ordered items"
-      quantity: "Quantity"
-      unit_price: "Price"
+      item_ordered: "Sản phẩm" 
+      quantity: "Số Lượng"
+      unit_price: "Thành tiền"
     shopping_cart:
-      message_01: "There are no item in your shopping cart. Please"
-      message_02: "and add some items to your cart."
-      go_back: "Go Back To Products"
+      message_01: "Hiện tại không có sản phẩm nào trong giỏ hàng của bạn. Làm 
+        ơn"
+      message_02: "và thêm sản phẩm vào giỏ hàng của bạn."
+      go_back: "Quay Trở Lại Trang Sản Phẩm"
     cart_text:
-      items: "Items"
+      items: "Sản Phẩm"
   blogs:
     index:
-      blogs: "Blogs"
-      read-more: "Read More"
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
     show:
-      blogs: "Blogs"
-      read-more: "Read More"
+      blogs: "Blogs" 
+      read-more: "Đọc tiếp"
+      average_rating: "Đánh giá trung bình"
+      based_on: "Dựa vào"
+      reviews: "lượt đánh giá"
+      add_review: "Đánh Giá"
+      back: "Trở lại"
+  reviews:
+    form:
+      rating: "Cho sao:"
+      comment: "Bình luận"
+      create_comment: "Tạo bình luận"
+    review:
+      edit: "Sửa bình luận"
+      delete: "Xoá"
+      are_you_sure: "Bạn muốn xoá bình luận?"
+    edit: 
+      edit_review: "Sửa đánh giá"  
+    new:
+      new_review: "Tạo đánh giá"
+
+
+  # View of admin
+  admin:
+    categories:
+      edit:
+        edit_category: "Edit category"
+        update: "Update"
+      index: 
+        all_categories: "All categores"
+        create_new_category: "Create new category"
+        name: "Name"
+        show_all_products: "Show all produtcs"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this category?"
+      new:
+        create_category: "Create Category"
+      show:
+        image: "Image"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        status: "Status"
+        show: "Show"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this product?"
+    dashboard:
+      header_dashboard:
+        Languages: "English"
+        English: "English"
+        Vietnamese: "Vietnamese"
+        home: "Home"
+        users: "Users"
+        products: "Products"
+        categories: "Categories"
+        account_setting: "Account Setting"
+        change_password: "Change password"
+        log_out: "Log out"
+    products:
+      create_product: "Product create!"
+      update_product: "product updated!"
+      index:
+        show_all_products: "Show all products"
+        create_new_product: "Create a new product"
+        all_product: "All products"
+      show:
+        image: "Image"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        status: "Status"
+      new:
+        create_new_product: "Create a new product"
+        create_product: "Create product"
+      edit:
+        edit_product: "Edit product" 
+        update_product: "Update product"
+    users:
+      # admin controller
+      create_user: "User created!"
+      update_user: "User update!"
+      # end admin controller
+      index: 
+        all_user: "All users"
+        create_new_user: "Create new user"
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        role: "Role"
+        show: "Show"
+        edit: "Edit"
+        delete: "Destroy"
+        are_you_sure: "Are you sure to delete this user?"
+      show:
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        role: "Role"
+        back_to_all_user: "Back to all users"
+      new:
+        create_a_new_user: "Create a new user"
+        create_user: "Create user"
+        admin: "Admin"
+        normal_user: "Normal user"
+      edit:
+        edit_user: "Edit user"
+        update_user: "Update user"
+        admin: "Admin"
+        normal_user: "Normal user"
 

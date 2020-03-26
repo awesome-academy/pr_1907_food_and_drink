@@ -15,9 +15,12 @@ Rails.application.routes.draw do
     get "/gallery", to: "pages#gallery"
     get "index", to: "blogs#index"
     resources :blogs, only: [:index, :show]
-    resources :products, only: :index
     resource :cart, only: :show
     resources :order_items, only: [:create, :update, :destroy]
+
+    resources :products do 
+      resources :reviews
+    end
   end
   namespace :admin do
     root "categories#index"
